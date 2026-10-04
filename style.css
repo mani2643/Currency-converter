@@ -1,0 +1,125 @@
+:root{
+    --bg-color:#f5efe6;
+    --card-color:white;
+    --accent-color:#e86a33;
+    --text-color:#333;
+    --border-color: #d9d4cc;
+    --container-border: #e5dfd6;
+    --input-bg: #faf9f7;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:14pt;
+    font-family:Poppins,sans-serif;
+}
+body{
+    height:100vh;
+    height:100dvh;
+    background-color:var(--bg-color);
+    padding:5%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--text-color);
+}
+.container{
+    background-color:var(--card-color);
+    height:auto;
+    width:min(450px,100%);
+    padding:1.25rem;
+    border:3px solid var(--container-border);
+    border-radius:10px;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.1);
+}
+h2{
+    color:var(--accent-color);
+    text-transform:capitalize;
+    text-align:center;
+    font-family:Poppins,sans-serif;
+}
+form{
+    margin:2rem 0 0.7rem 0;
+}
+.amount p{
+    margin-bottom:0.8rem;
+    color:var(--text-color);    
+}
+select{
+    background-color:var(--input-bg);
+    appearance:base-select;
+    border:none;
+    font:inherit;
+    font-size:0.8rem;
+    outline:none;
+}
+button,input{
+    width:100%;
+    border:1px solid var(--border-color);
+    border-radius:10px;
+    font:inherit;
+    font-size:0.85rem;
+    padding:.5em;
+    background-color:var(--input-bg);
+}
+input:focus{
+    outline:none;
+    border-color:var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(232, 106, 51, 0.15);
+}
+#exchange-btn{
+    font-weight:600;
+    background-color:var(--accent-color);
+    color:white;
+    border-color:var(--accent-color);
+    cursor:pointer;
+    transition:200ms ease;
+}
+#exchange-btn:hover{
+    background-color:#d9522a;
+    border-color:#d9522a;
+}
+.dropdown{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:1.5rem 0 1rem 0;
+}
+.select-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:var(--input-bg);
+    border-radius:0.5rem;
+    border:1px solid var(--border-color);
+    padding:0.25rem;
+    gap:10px;
+}
+.select-container img{
+    width:2rem;
+}
+.dropdown svg{
+    margin-top:1.2rem;
+    flex-shrink:0;
+}
+.msg{
+    margin:1.5rem 0;
+}
+
+@media(max-width:500px){
+    html{
+        font-size:12pt;
+    }
+    .container{
+        padding:0.8rem;
+    }
+    form{
+        margin-top:1rem;
+    }
+    .select-container img{
+        width:1.5rem;
+    }
+}
